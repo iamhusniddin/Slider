@@ -1,0 +1,254 @@
+.card{
+	--border-width: 2px;
+	position: relative;
+	color: white;
+	border-radius: var(--border-width);
+}
+	.card:after {
+	  position: absolute;
+	  content: "";
+	  top: calc(-1 * var(--border-width));
+	  left: calc(-1 * var(--border-width));
+	  z-index: -1;
+	  width: calc(100% + var(--border-width) * 2);
+	  height: calc(100% + var(--border-width) * 2);
+	  background: linear-gradient(
+		60deg,
+		hsl(224, 85%, 66%),
+		hsl(269, 85%, 66%),
+		hsl(314, 85%, 66%),
+		hsl(359, 85%, 66%),
+		hsl(44, 85%, 66%),
+		hsl(89, 85%, 66%),
+		hsl(134, 85%, 66%),
+		hsl(179, 85%, 66%)
+	  );
+	  background-size: 300% 300%;
+	  background-position: 0 50%;
+	  border-radius: calc(2 * var(--border-width));
+	  animation: moveGradient 4s alternate infinite;
+	}
+  
+  
+  @keyframes moveGradient {
+	50% {
+	  background-position: 100% 50%;
+	}
+  }
+
+
+.pro{
+	cursor: pointer;
+	width: 40px;
+	height: 30px;
+	border-radius: 10px;
+	font-size: 20px;
+	border: none;
+}
+
+h2 {
+	margin: 10px 0;
+  color: white;
+}
+
+h2:hover{
+  color: aliceblue;
+}
+
+h4 {
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+h4:hover{
+  color: aliceblue;
+}
+
+.job{
+  font-size: 17px;
+}
+
+.job:hover{
+  color: aliceblue;
+}
+
+p {
+	font-size: 14px;
+	line-height: 21px;
+  display: block;
+}
+
+p:hover{
+	color: aliceblue;
+}
+
+.card-container {
+	background-color: #1e1b31;
+	border-radius: 10px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.card-container .pro {
+	color: #231E39;
+	background-color: #FEBB0B;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.card-container .round {
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
+  width: 130px;
+  height: 110px;
+}
+
+.buttons{
+  padding-bottom: 20px;
+}
+
+button.primary {
+  cursor: pointer;
+	background-color: #03BFCB;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+  margin-left: 3px;
+}
+
+button.primary:hover{
+  background-color: transparent;
+  color: #03BFCB;
+}
+
+button.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+  padding: 10px 31px;
+  margin-right: 2px;
+}
+
+button.primary.ghost:hover{
+  background-color: #03BFCB;
+  color: #231E39;
+  border: 1px solid #03BFCB;
+}
+
+.skills {
+	padding-top: 30px;
+	background-color: #161229;
+    height: 170px;
+	width: 100%;
+}
+
+
+.skills button {
+	cursor: pointer;
+	border-radius: 2px;
+	margin: 0 7px 7px 0;
+	height: 35px;
+}
+
+.next{
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 20px;
+}
+
+.prev-btn{
+	width: 70px;
+	background-color:transparent;
+  border: 1px solid #03BFCB;
+  color: #03BFCB;
+}
+
+.prev-btn:hover{
+	background-color: #03BFCB;
+  color: #161229;
+  border: 2px solid rgb(9, 183, 236);
+}
+
+.next-btn{
+	width: 70px;
+	background-color:transparent;
+  border: 1px solid #03BFCB;
+  color: #03BFCB;
+}
+
+.next-btn:hover{
+	background-color: #03BFCB;
+  color: #161229;
+  border: 2px solid rgb(9, 183, 236);
+}
+
+
+
+.random-btn{
+  width: 90px;
+	background-color:transparent;
+  border: 1px solid #03BFCB;
+  color: #03BFCB;
+}
+
+.random-btn:hover{
+	background-color: #03BFCB;
+  color: #161229;
+  border: 2px solid rgb(9, 183, 236);
+}
+
+/* #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+   */
